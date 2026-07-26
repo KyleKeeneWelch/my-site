@@ -1,5 +1,5 @@
 import "../styles/static.css";
-import resume from "../assets/docs/resume.docx";
+import resume from "../assets/docs/resume.pdf";
 import "@fortawesome/fontawesome-free/js/fontawesome";
 import "@fortawesome/fontawesome-free/js/brands";
 import "@fortawesome/fontawesome-free/js/solid";
@@ -30,6 +30,11 @@ import consort from "../assets/images/portfolio/consort.png";
 import bookAppES from "../assets/images/portfolio/book-app-es.png";
 import bookAppAPI from "../assets/images/portfolio/book-app-api.png";
 import bookAppClient from "../assets/images/portfolio/book-app-client.png";
+import empireTotalWar from "../assets/images/portfolio/empire-total-war.jpg";
+import napoleonTotalWar from "../assets/images/portfolio/napoleon-total-war.jpg";
+import tombRaiderGuardianOfLight from "../assets/images/portfolio/tomb-raider-guardian-of-light.jpg";
+import hitmanAbsolution from "../assets/images/portfolio/hitman-absolution.jpg";
+import tombRaider2013 from "../assets/images/portfolio/tomb-raider-2013.jpg";
 
 class Display {
   static projects = [];
@@ -112,7 +117,12 @@ class Display {
     projectDetails.appendChild(projectTitle);
     projectDetails.appendChild(projectDate);
     projectDetails.appendChild(projectDescription);
-    projectDetails.appendChild(projectRepo);
+
+    if (project.getRepo()) {
+      projectDetails.appendChild(projectRepo);
+      console.log(project.getRepo());
+    }
+
     projectDetails.appendChild(projectTags);
     projectContainer.appendChild(projectDetails);
     projectContainer.appendChild(projectImageContainer);
@@ -171,6 +181,7 @@ class Display {
           "Disconnected Model",
           "Event Driven",
           "Entity Framework",
+          "University",
         ],
         "C# application using the popular .NET framework by Microsoft to simulate the actions and animation of an elevator.",
         "https://github.com/KyleKeeneWelch/control-an-elevator",
@@ -192,6 +203,7 @@ class Display {
           "Mobile",
           "Hybrid",
           "Object Oriented",
+          "University",
         ],
         "Flutter Mobile Application written with Dart that serves as a workout planner and log to further fitness goals and abstract the fitness process.",
         "https://github.com/KyleKeeneWelch/actigym",
@@ -214,6 +226,7 @@ class Display {
           "API",
           "MVT",
           "Django",
+          "University",
         ],
         "Web application using the Django framework that will accommodate a series of topics for E-learning to be consumed by users of which personas will differ based on educational history and goals.",
         "https://github.com/KyleKeeneWelch/topedia",
@@ -226,7 +239,7 @@ class Display {
       new Project(
         "The Odin Project: Landing Page",
         new Date("2023-05-17"),
-        ["HTML", "CSS", "JS", "PHP", "XAMPP", "Web"],
+        ["HTML", "CSS", "JS", "PHP", "XAMPP", "Web", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Creates a simple landing page for a non-existing product/business.",
         "https://github.com/KyleKeeneWelch/odin-landing-page",
         "odin-landing-page.html",
@@ -238,7 +251,7 @@ class Display {
       new Project(
         "The Odin Project: Rock Paper Scissors",
         new Date("2023-05-22"),
-        ["HTML", "CSS", "JS", "Web"],
+        ["HTML", "CSS", "JS", "Web", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Emulates the popular rock, paper, scissors game utilizing DOM methods and JavaScript.",
         "https://github.com/KyleKeeneWelch/odin-rock-paper-scissors",
         "odin-rock-paper-scissors.html",
@@ -250,7 +263,7 @@ class Display {
       new Project(
         "The Odin Project: Etch-a-Sketch",
         new Date("2023-05-25"),
-        ["HTML", "CSS", "JS", "Web"],
+        ["HTML", "CSS", "JS", "Web", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Provides a simple canvas layout and related tools to draw pixel-like images.",
         "https://github.com/KyleKeeneWelch/odin-etch-a-sketch",
         "odin-etch-a-sketch.html",
@@ -262,7 +275,7 @@ class Display {
       new Project(
         "The Odin Project: Calculator",
         new Date("2023-05-30"),
-        ["HTML", "CSS", "JS", "Web"],
+        ["HTML", "CSS", "JS", "Web", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Provides functionality typical of a calculator.",
         "https://github.com/KyleKeeneWelch/odin-calculator",
         "odin-calculator.html",
@@ -274,7 +287,7 @@ class Display {
       new Project(
         "The Odin Project: Sign-Up Form",
         new Date("2023-06-06"),
-        ["HTML", "CSS", "JS", "Web"],
+        ["HTML", "CSS", "JS", "Web", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Creates a sign up page with a form and validation handled through the JavaScript Validation API.",
         "https://github.com/KyleKeeneWelch/odin-sign-up-form",
         "odin-sign-up-form.html",
@@ -286,7 +299,7 @@ class Display {
       new Project(
         "The Odin Project: Admin Dashboard",
         new Date("2023-06-12"),
-        ["HTML", "CSS", "JS", "Web", "CSS Grid"],
+        ["HTML", "CSS", "JS", "Web", "CSS Grid", "The Odin Project"],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Uses techniques of flexbox and grid to structure a typical admin dashboard layout.",
         "https://github.com/KyleKeeneWelch/odin-admin-dashboard",
         "odin-admin-dashboard.html",
@@ -298,7 +311,15 @@ class Display {
       new Project(
         "The Odin Project: Library",
         new Date("2023-06-17"),
-        ["HTML", "CSS", "JS", "Web", "CSS Grid", "Object Oriented"],
+        [
+          "HTML",
+          "CSS",
+          "JS",
+          "Web",
+          "CSS Grid",
+          "Object Oriented",
+          "The Odin Project",
+        ],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Utilizes DOM methods and objects to create book entries and maintain a library application.",
         "https://github.com/KyleKeeneWelch/odin-library",
         "odin-library.html",
@@ -318,6 +339,7 @@ class Display {
           "Factory Functions",
           "IIFE",
           "Object Oriented",
+          "The Odin Project",
         ],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Contains a tic-tac-toe grid and DOM methods to track the winning conditions and rounds within the popular game.",
         "https://github.com/KyleKeeneWelch/odin-tic-tac-toe",
@@ -330,7 +352,16 @@ class Display {
       new Project(
         "The Odin Project: Restaurant Page",
         new Date("2023-06-28"),
-        ["HTML", "CSS", "JS", "Web", "Webpack", "NPM", "HTML Webpack Plugin"],
+        [
+          "HTML",
+          "CSS",
+          "JS",
+          "Web",
+          "Webpack",
+          "NPM",
+          "HTML Webpack Plugin",
+          "The Odin Project",
+        ],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Generates pages for a made-up Japanese fast food chain utilizing JavaScript, NPM packages and Webpack Plugins.",
         "https://github.com/KyleKeeneWelch/odin-restaurant-page",
         "odin-restaurant-page.html",
@@ -353,6 +384,7 @@ class Display {
           "HTML Webpack Plugin",
           "Local Storage",
           "Modules",
+          "The Odin Project",
         ],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Uses Objects and Modules to create data structures representing the entities required in a To-Do-List application. Data is stored and accessed through local storage and pages are generated and optimized through Webpack and plugin.",
         "https://github.com/KyleKeeneWelch/odin-to-do-list",
@@ -378,6 +410,7 @@ class Display {
           "Modules",
           "API",
           "Async/Await",
+          "The Odin Project",
         ],
         "This project is a project undertaken as part of The Odin Project learning web course teaching HTML, CSS and JavaScript skills. Uses Objects and Modules to create data structures representing the entities required in a Weather application. Makes calls to the Weather API using fetch() and async functions to obtain relevant Weather information to be processed and displayed appropriately on the DOM.",
         "https://github.com/KyleKeeneWelch/odin-weather-app",
@@ -400,6 +433,7 @@ class Display {
           "Passport",
           "Webpack",
           "Async/Await",
+          "University",
         ],
         "This project was completed as part of my final assignment for my Software Development module at University. It required the explanation of several concepts such as version control, interoperability, low coupling, high cohesion and more. The main emphasis was utilizing the provided tomato API to produce a meaningful application which became this tomato mathematics game.",
         "https://github.com/KyleKeeneWelch/tomato-game",
@@ -412,7 +446,16 @@ class Display {
       new Project(
         "Express Local Library",
         new Date("2023-12-23"),
-        ["Web", "Express", "NPM", "REST", "MVC", "MongoDB", "Async/Await"],
+        [
+          "Web",
+          "Express",
+          "NPM",
+          "REST",
+          "MVC",
+          "MongoDB",
+          "Async/Await",
+          "University",
+        ],
         "This project was the first big step into becoming familiar with Express and Back-end development in preparation for my final year artefact. It follows the Mozilla Express Tutorial to develop a simple library application with CRUD operations on authors, books, genres and book instances.",
         "https://github.com/KyleKeeneWelch/express-local-library",
         "express-local-library.html",
@@ -433,6 +476,7 @@ class Display {
           "MVC",
           "MongoDB",
           "Async/Await",
+          "The Odin Project",
         ],
         "This project had similar aims to the Express Local Library but covered the teachings and context behind the lessons taught on Express in The Odin Project. It was a much larger project than the library and posed additional challenges such as multi-part form data, and validation on the Back-end.",
         "https://github.com/KyleKeeneWelch/odin-inventory-application",
@@ -454,6 +498,7 @@ class Display {
           "JWT",
           "MongoDB",
           "Async/Await",
+          "The Odin Project",
         ],
         "This project aimed to put the teachings of RESTful APIs and Express from The Odin Project into an artefact that can process Blog-related requests and respond. The original concept involved building a front-end to be used alongside the API but due to time restrictions on sourcing this expertise for my final project, I aimed to fully implement the API and leave the front-end for developing with React.",
         "https://github.com/KyleKeeneWelch/odin-inventory-application",
@@ -466,7 +511,7 @@ class Display {
       new Project(
         "Odin CV Application",
         new Date("2024-01-20"),
-        ["Web", "React", "NPM", "Vite"],
+        ["Web", "React", "NPM", "Vite", "The Odin Project"],
         "This project was my first attempt at building a simple <span>React</span> application using the teachings from The Odin Project. It was a simple CV application that allows the user to enter in some details for sections such as general, education, and experience, and printed this information back to the user as their formatted 'CV'.",
         "https://github.com/KyleKeeneWelch/odin-cv-application",
         "odin-cv-application.html",
@@ -488,6 +533,7 @@ class Display {
           "Bootstrap",
           "MongoDB",
           "Async/Await",
+          "University",
         ],
         "This project was completed as part of an assignment in an Agile Project Management module. Within this project, I took lead as the Project Manager and followed an Agile Scrum methodology to deliver meaningful prototypes after weekly sprints. I was able todelegate tasks to other members and offer guidance as the individual who had the most experience in Full Stack Development. As a result, the team produced a simple Student Collaboration site that enabled students to interact and share ideas of subjects of interest.",
         "https://github.com/KyleKeeneWelch/consort",
@@ -511,6 +557,7 @@ class Display {
           "CQRS",
           "EventStoreDB",
           "MongoDB",
+          "University",
         ],
         "This project is one component part of a larger Scalable, Reusable, Microservices architecture. It was developed in my Final Year Thesis as experimentation for the enhanced user interaction and experience applied from using the architecture for a business workflow. The demonstrated application was a Book Ratings and Reviews site that used the Event Sourcing System to define events, projections, and apply functions relating to Book Recommendations.",
         "https://github.com/KyleKeeneWelch/BookAppES",
@@ -523,7 +570,16 @@ class Display {
       new Project(
         "Final Year Project: Back-End API",
         new Date("2024-03-16"),
-        ["Web", "Express", "NPM", "REST", "JWT", "Async/Await", "MongoDB"],
+        [
+          "Web",
+          "Express",
+          "NPM",
+          "REST",
+          "JWT",
+          "Async/Await",
+          "MongoDB",
+          "University",
+        ],
         "This project is one component part of a larger Scalable, Reusable, Microservices architecture. It was developed in my Final Year Thesis as experimentation for the enhanced user interaction and experience applied from using the architecture for a business workflow. The demonstrated application was a Book Ratings and Reviews site that used the Event Sourcing System to define events, projections, and apply functions relating to Book Recommendations.",
         "https://github.com/KyleKeeneWelch/BookAppAPI",
         "book-app-api.html",
@@ -544,11 +600,93 @@ class Display {
           "JWT",
           "Async/Await",
           "Client-Side Routing",
+          "University",
         ],
         "This project is one component part of a larger Scalable, Reusable, Microservices architecture. It was developed in my Final Year Thesis as experimentation for the enhanced user interaction and experience applied from using the architecture for a business workflow. The demonstrated application was a Book Ratings and Reviews site that used the Event Sourcing System to define events, projections, and apply functions relating to Book Recommendations.",
         "https://github.com/KyleKeeneWelch/BookAppClient",
         "book-app-client.html",
         bookAppClient
+      )
+    );
+
+    this.projects.push(
+      new Project(
+        "Feral Interactive - EMPIRE: Total War",
+        new Date("2024-11-21"),
+        ["iOS", "Android", "UX", "Strategy", "Feral Interactive"],
+        "This was the first project I partook in after joining Feral Interactive. The project was halfway during development so it required getting to grips with new skills and getting familiar with the new game.",
+        "",
+        "empire-total-war.html",
+        empireTotalWar
+      )
+    );
+
+    this.projects.push(
+      new Project(
+        "Feral Interactive - NAPOLEON: Total War",
+        new Date("2025-12-02"),
+        ["iOS", "Android", "UX", "Strategy", "Feral Interactive"],
+        "The next game in the Total War franchise starring Napoleon and a more in-depth look into some of Europe's greatest battles. I was able to take charge as the Design Lead of this project building on the success of EMPIRE.",
+        "",
+        "napoleon-total-war.html",
+        napoleonTotalWar
+      )
+    );
+
+    this.projects.push(
+      new Project(
+        "Feral Interactive - Lara Croft: Guardian of Light",
+        new Date("2025-02-27"),
+        [
+          "iOS",
+          "Android",
+          "UX",
+          "Action-adventure",
+          "Puzzler",
+          "Feral Interactive",
+        ],
+        "Played a supportive role in the UX development of this project. First dive into something that wasn't strategy and had new challenges.",
+        "",
+        "tomb-raider-guardian-of-light.html",
+        tombRaiderGuardianOfLight
+      )
+    );
+
+    this.projects.push(
+      new Project(
+        "Feral Interactive - Hitman Absolution",
+        new Date("2025-10-16"),
+        [
+          "iOS",
+          "Android",
+          "UX",
+          "Action-adventure",
+          "Stealth",
+          "Feral Interactive",
+        ],
+        "I had spent some of my time working on this project and the rest of my time divided between other projects leading up to its initial release. It meant that I was familiar enough to lead the Design of the Contracts mode patch which released on May 14th 2026",
+        "",
+        "hitman-absolution.html",
+        hitmanAbsolution
+      )
+    );
+
+    this.projects.push(
+      new Project(
+        "Feral Interactive - Tomb Raider (2013)",
+        new Date("2026-02-12"),
+        [
+          "iOS",
+          "Android",
+          "UX",
+          "Action-adventure",
+          "Puzzler",
+          "Feral Interactive",
+        ],
+        "Another project playing a supportive UX role however this was a big step up from the Isometric Puzzler that was Guardian of Light. Employed new practices that boosted productivity and maintainability that are in use today.",
+        "",
+        "tomb-raider-2013.html",
+        tombRaider2013
       )
     );
   }

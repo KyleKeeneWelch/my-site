@@ -164,6 +164,36 @@ module.exports = {
       filename: "book-app-client.html",
       favicon: "./src/assets/favicon/favicon.ico",
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./src/templates/projects/empire-total-war.html",
+      filename: "empire-total-war.html",
+      favicon: "./src/assets/favicon/favicon.ico",
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./src/templates/projects/napoleon-total-war.html",
+      filename: "napoleon-total-war.html",
+      favicon: "./src/assets/favicon/favicon.ico",
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./src/templates/projects/tomb-raider-guardian-of-light.html",
+      filename: "tomb-raider-guardian-of-light.html",
+      favicon: "./src/assets/favicon/favicon.ico",
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./src/templates/projects/tomb-raider-2013.html",
+      filename: "tomb-raider-2013.html",
+      favicon: "./src/assets/favicon/favicon.ico",
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./src/templates/projects/hitman-absolution.html",
+      filename: "hitman-absolution.html",
+      favicon: "./src/assets/favicon/favicon.ico",
+    }),
   ],
   output: {
     filename: "main.js",
@@ -195,10 +225,10 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.docx$/i,
+        test: /\.pdf$/i,
         loader: "file-loader",
         options: {
-          name: "Kyle_Keene_Welch_Resume.docx",
+          name: "Kyle_Keene_Welch_Resume.pdf",
         },
       },
     ],

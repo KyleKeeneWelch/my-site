@@ -124,10 +124,11 @@ nav {
         font-weight: 600;
         color: var(--white);
         transition: 150ms ease-in-out;
+        font-size: 24px;
 
         &:hover {
             color: var(--color-main);
-            font-size: 18px;
+            font-size: 28px;
         }
     }
 }
@@ -390,10 +391,18 @@ button {
     
     & img {
         border-radius: var(--border-radius);
-        width: 220px;
+        width: auto;
         height: 102px;
         z-index: 2;
     }
+}
+
+#feral-interactive-header {
+    background: url('../assets/images/about/feral-interactive.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #uni-beds-header {
@@ -486,14 +495,14 @@ button {
         background-size: cover;
         z-index: -1;
     }
-    &:nth-of-type(4) > div {
+    /* &:nth-of-type(4) > div {
         background: url("../assets/images/about/supporting-others-background.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover; 
         z-index: -1;
-    }
-    &:nth-of-type(5) > div {
+    } */
+    &:nth-of-type(4) > div {
         background: url("../assets/images/about/music_podcast_background.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -818,6 +827,13 @@ footer {
 
 .fa-github:hover, .fa-linkedin:hover, .fa-twitter:hover {
     transform: rotate(360deg) scale(1.2);
+}
+
+.centre-link
+{
+    width: 100%;
+    text-align: center;
+    display: block;
 }
 
 @media (hover: hover) {
